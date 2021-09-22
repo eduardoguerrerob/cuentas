@@ -1,0 +1,34 @@
+{
+    "solicitudes": [
+        {
+            "id": 1,
+            "cuentas": [
+                {
+                    "numero": 12345,
+                    "nombre": "Activo",
+                    "imputable": false
+                },
+                {
+                    "numero": 23523,
+                    "nombre": "Pasivo",
+                    "imputable": true
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "cuentas": [
+                {
+                    "numero": 4743,
+                    "nombre": "Presupuesto",
+                    "imputable": false
+                },
+                {
+                    "numero": 6467,
+                    "nombre": "Varios",
+                    "imputable": true
+                }
+            ]
+        }
+    ]
+}
