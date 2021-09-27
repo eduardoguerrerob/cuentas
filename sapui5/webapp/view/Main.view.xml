@@ -57,7 +57,7 @@
                             </Panel>
                         </HBox>
                         <HBox >
-                            <core:Fragment fragmentName="egb.sapui5.fragment." />
+                            <core:Fragment fragmentName="egb.sapui5.fragment.Request" type="XML"/>
                         </HBox>
                     </content>
                 </Page>
