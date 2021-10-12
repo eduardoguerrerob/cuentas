@@ -1,67 +1,60 @@
-<mvc:View controllerName="egb.sapui5.controller.Main" 
-    displayBlock="true"
+<mvc:View controllerName="egb.sapui5.controller.Main" displayBlock="true"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core">
-    <Shell id="shell">
-        <App id="app">
-            <pages>
-                <Page id="page" title="{i18n>title}">
-                    <content>
-                        <Panel >
-                            <HBox >
-                                <Label labelFor="paises" text="{i18n>country}" class="sapUiSmallMargin"/>
-                                <Select id="paises" items="{paisesModel>/paises}" selectedKey="{paisesModel>/paisSeleccionado}" forceSelection="false">
-                                    <core:Item key="{paisesModel>id}" text="{paisesModel>nombre}"/>
-                                </Select>
-                                <Button text="{i18n>filterEmployee}" press="onFilter"
-                                class="sapUiSmallMarginBegin"/>
-                            </HBox>
-                        </Panel>
-                        <HBox>
-                            <Panel >
-                                <Table id="tableEmp" items="{northwind>/Employees}">
-                                    <columns>
-                                        <Column>
-                                            <header>
-                                                <Label text="{i18n>empID}"/>
-                                            </header>
-                                        </Column>
-                                        <Column>
-                                            <header>
-                                                <Label text="{i18n>empName}"/>
-                                            </header>
-                                        </Column>
-                                        <Column>
-                                            <header>
-                                                <Label text="{i18n>empCountry}"/>
-                                            </header>
-                                        </Column>
-                                         <Column>
-                                            <header>
-                                                <Label text="{i18n>showRequests}"/>
-                                            </header>
-                                        </Column>
-                                    </columns>
-                                    <items>
-                                        <ColumnListItem >
-                                            <cells>
-                                                <Label text="{northwind>EmployeeID}"/>
-                                                <Label text="{northwind>LastName} {northwind>FirstName}"/>
-                                                 <Label text="{northwind>Country}"/>
-                                                 <core:Icon src="sap-icon://show" press="onShowRequests"/>
-                                            </cells>
-                                        </ColumnListItem>
-                                    </items>
-                                </Table>
-                            </Panel>
-                        </HBox>
-                        <HBox >
-                            <core:Fragment fragmentName="egb.sapui5.fragment.Request" type="XML"/>
-                        </HBox>
-                    </content>
-                </Page>
-            </pages>
-        </App>
-    </Shell>
+
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel >
+                <HBox >
+                    <Label labelFor="paises" text="{i18n>country}" class="sapUiSmallMargin"/>
+                    <Select id="paises" items="{paisesModel>/paises}" selectedKey="{paisesModel>/paisSeleccionado}" forceSelection="false">
+                        <core:Item key="{paisesModel>id}" text="{paisesModel>nombre}"/>
+                    </Select>
+                    <Button text="{i18n>filterEmployee}" press="onFilter" class="sapUiSmallMarginBegin"/>
+                </HBox>
+            </Panel>
+            <HBox>
+                <Panel >
+                    <Table id="tableEmp" items="{northwind>/Employees}">
+                        <columns>
+                            <Column>
+                                <header>
+                                    <Label text="{i18n>empID}"/>
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Label text="{i18n>empName}"/>
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Label text="{i18n>empCountry}"/>
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Label text="{i18n>showRequests}"/>
+                                </header>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="toDetails">
+                                <cells>
+                                    <Label text="{northwind>EmployeeID}"/>
+                                    <Label text="{northwind>LastName} {northwind>FirstName}"/>
+                                    <Label text="{northwind>Country}"/>
+                                    <core:Icon src="sap-icon://show" press="onShowRequests"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </Panel>
+            </HBox>
+            <HBox >
+                <core:Fragment fragmentName="egb.sapui5.fragment.Request" type="XML"/>
+            </HBox>
+        </content>
+    </Page>
 </mvc:View>

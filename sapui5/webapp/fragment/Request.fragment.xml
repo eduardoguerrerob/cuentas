@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m"
     xmlns:core="sap.ui.core">
     <HBox>
-        <Panel>
+        <Panel width="50%">
             <Table items="{jsonSolicitudeModel>/solicitudes/0/cuentas}">
                 <columns>
                     <Column >

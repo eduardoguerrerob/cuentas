@@ -45,10 +45,10 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "egb.sapui5.view.Main",
+      "viewName": "egb.sapui5.view.App",
       "type": "XML",
       "async": true,
-      "id": "Main"
+      "id": "app"
     },
     "dependencies": {
       "minUI5Version": "1.60.1",
@@ -99,9 +99,16 @@
       "routes": [
         {
           "name": "RouteMain",
-          "pattern": "RouteMain",
+          "pattern": "",
           "target": [
             "TargetMain"
+          ]
+        },
+        {
+          "name": "RouteDetails",
+          "pattern": "details/{employeeID}",
+          "target": [
+            "TargetDetails"
           ]
         }
       ],
@@ -112,6 +119,10 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
+        },
+        "TargetDetails": {
+          "viewType": "XML",
+          "viewName": "Details"
         }
       }
     }

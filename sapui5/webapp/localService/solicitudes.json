@@ -122,18 +122,7 @@
         },
         {
             "empleadoId": 9,
-            "cuentas": [
-                {
-                    "numero": 945345,
-                    "nombre": "Cta AAA9",
-                    "imputable": true
-                },
-                {
-                    "numero": 9435,
-                    "nombre": "Cta BBBB9",
-                    "imputable": false
-                }
-            ]
+            "cuentas": []
         }
     ]
 }

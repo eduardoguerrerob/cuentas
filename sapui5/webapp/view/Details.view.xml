@@ -1,0 +1,46 @@
+<mvc:View controllerName="egb.sapui5.controller.Details" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button icon="sap-icon://nav-back" press="onBack"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Text text="{northwind>FirstName}, {northwind>LastName}"/>
+                </contentMiddle>
+            </Bar>
+        </customHeader>
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="employeeData" editable="false" 
+            layout="ResponsiveGridLayout" 
+            title="Employee Details" 
+            labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false">
+                <f:content>
+                    <core:Title text="{i18n>employeeInformation}" />
+                    <Label text="{i18n>empName}" />
+                    <Text text="{northwind>FirstName}, {northwind>LastName}" />
+                    <Label text="{i18n>empTitle}" />
+                    <Text text="{northwind>Title}" />
+                    
+                    <core:Title text="{i18n>empAddress}" />
+                    <Label text="{i18n>empStreet}" />
+                    <Text text="{northwind>Address}" />
+                    <Label text="{i18n>empCity}" />
+                    <Text text="{northwind>City}" />
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+
+        <HBox >
+            <Button text="{i18n>showRequests}" press="onShowRequests"/>
+        </HBox>
+        <HBox >
+            <core:Fragment fragmentName="egb.sapui5.fragment.Request" type="XML"/>
+        </HBox>
+    </Page>
+</mvc:View>
