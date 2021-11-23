@@ -9,9 +9,7 @@ sap.ui.define([
     function (Controller) {
 
         return Controller.extend("egb.sapui5.controller.Base", {
-            onInit: function () {
 
-            },
 
             onShowRequests: function (oEvent) {
                 const $tableRequests = this.getView().byId("tableRequests");

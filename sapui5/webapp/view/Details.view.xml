@@ -38,6 +38,7 @@
 
         <HBox >
             <Button text="{i18n>showRequests}" press="onShowRequests"/>
+            <Button text="{i18n>createRequest}" press="onCreateRequests" class="sapUiSmallMarginBegin"/>
         </HBox>
         <HBox >
             <core:Fragment fragmentName="egb.sapui5.fragment.Request" type="XML"/>

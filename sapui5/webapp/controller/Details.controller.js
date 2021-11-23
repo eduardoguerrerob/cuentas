@@ -28,10 +28,20 @@ function(Base, History, JSONModel){
             //modelo de cuentas
             let jsonSolicitudeModel = new JSONModel();
             jsonSolicitudeModel.loadData("./localService/solicitudes.json", false);
-            this.getView().setModel(jsonSolicitudeModel, "jsonSolicitudeModel");
+            this.getView().setModel(jsonSolicitudeModel, "jsonSolicitudeModel");    
+        },
+
+        onBeforeRendering: function() {
+            alert("onBeforeRendering")
+            const $tableRequests = this.getView().byId("tableRequests");
+           $tableRequests.destroyItems();
         },
 
         onBack: function(oEvent){
+
+ const $tableRequests = this.getView().byId("tableRequests");
+                $tableRequests.destroyItems();
+
             const oHistory = History.getInstance();
             const sPrevious = oHistory.getPreviousHash();
             if(sPrevious !== undefined){
