@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog id="newRequestDialog" title="{i18n>titleNewRequestDialog}">
+        <f:SimpleForm editable="true">
+            <Label text="numero" labelFor="newNumber"/>
+            <Input id="newNumber" width="200px"/>
+            <Label text="nombre" labelFor="newName"/>
+            <Input id="newName" width="400px"/>
+        </f:SimpleForm>
+        <beginButton>
+            <Button text="{i18n>closeNewReqDialog}" press="onCloseNewReqDialog"/>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>
