@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog id="newRequestDialog" title="{i18n>newRequestDialog}">
+	<f:SimpleForm id="SimpleFormDisplay354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Cuenta"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Número" labelFor="number"/>
+				<Input id="number" width="200px" />
+                <Label text="Nombre" labelFor="name"/>
+				<Input id="name" width="400px" />
+			</f:content>
+		</f:SimpleForm>
+        <beginButton>
+            <Button text="{i18n>closeDialogNewReq}" press="onCloseDialogNewReq"/>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>
